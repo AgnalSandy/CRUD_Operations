@@ -1,0 +1,31 @@
+﻿@page
+@using LoginSetup.ViewModels
+@model LoginSetup.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/pages/shared/_AccountLayout.cshtml";
+
+}
+<div class="account-container">
+    <div class="account-box">
+        <h2 class="text-center mb-4">Login</h2>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-anger">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Email" class="form-label"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+         <div class="mb-3">
+                <label asp-for="Input.Password" class="form-label"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+        </form>
+
+    </div>
+
+</div>
